@@ -1,38 +1,115 @@
-.App {
+:root{
+  --text-color: #000;
+  --background-color: #fff;
+}
+
+[data-theme="dark"]{
+  --text-color: #fff;
+  --background-color: #000;
+}
+
+body{
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-menu{
+  display: flex;
+  justify-content: center;
+
+}
+
+.navigation-liste{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  text-decoration: none;
+  
+  
+}
+
+.question-mark{
+  background-color: white;
+  margin: 8px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.info-box{
+  position: absolute;
+  margin-left: 150px;
+  margin-top: -16px;
+  font-size: 12px;
+  background-color:#ffffec;
+  border-radius: 5px;
+  border: 1px solid black;
   text-align: center;
+  z-index: 1;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form{
+  height: 700px;
+  width: 500px;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-label{
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  
+}
+
+.form-select{
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0px ;
+}
+
+.checkbox-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.form-label-info{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mail-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 80px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.rewrite{
+  margin: 10px;
+  border-radius: 15px;
+  padding: 15px;
+  font-weight: bold;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
