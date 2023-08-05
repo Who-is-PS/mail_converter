@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 
 
-export default function Mail(){
+export default function Mail({emailText,setEmailText, hasFormulated, setHasFormulated, handleSubmit}){
 
-    const [emailText, setEmailText] = useState("");
-    const [hasFormulated, setHasFormulated] = useState(false)
     
     const handleChange = (event) =>{
         setEmailText(event.target.value);
        
     };
 
-    const handleSubmit = () =>{
-        console.log("Ergebnis der Umformulierung: ",emailText);
-        setHasFormulated(true);
-    }
+    // // const handleSubmit = () =>{
+    //     console.log("Ergebnis der Umformulierung: ",emailText);
+    //     setHasFormulated(true);
+    // }
 
     return(
         <div className="mail-container">

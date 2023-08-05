@@ -10,8 +10,8 @@ export default function NavBar(){
                 <li><a href="/about">Über uns</a></li>
                 <li><a href="/contact">Kontakt</a></li>
             </ul>
-            <button onClick={toggleDarkMode}>
-                {isDarkMode ? "Switch to Light Mode": "Switch to Dark Mode"}
+            <button className="dark-mode" onClick={toggleDarkMode}>
+                {isDarkMode ? "Light Mode": "Dark Mode"}
             </button>
         </nav>
     )

@@ -6,6 +6,7 @@ import Kriterien from './components/Kriterien';
 import Mail from './components/Mail'; 
 import { useEffect, useState } from 'react';
 import { DarkModeContext } from './components/DarkMode';
+import { reformulateEmail as reformulateEmailAPI } from './components/ConvertedMail';
 
 function App() {
 
@@ -19,6 +20,37 @@ function App() {
   const [purpose, setPurpose] = useState("inform");
   const [address, setAddress] = useState(false);
   const [additionalInfo, setAdditionalInfo] = useState("")
+
+  const [emailText, setEmailText] = useState("");
+  const [hasFormulated, setHasFormulated] = useState(false);
+  const [reformulateEmail, setReformulateEmail] = useState("")
+  
+  
+
+  const handleSubmit = async() =>{
+      const criteriaData = {
+        emailLength,
+        politeness,
+        complexity,
+        tone,
+        audience,
+        purpose,
+        address,
+        additionalInfo,
+      };
+
+      try{
+        const result = await reformulateEmailAPI(criteriaData, emailText);
+        if (result.choices && result.choices.length > 0) {
+          setReformulateEmail(result.choices[0].text.trim());
+          setHasFormulated(true);
+        } else{
+          console.log("Keine Antwort von der API erhalten.");
+        }
+      } catch (error){
+        console.log("Fehler beim Aufrufen der API:", error)
+      }
+  }
 
 
   const toggleDarkMode = () =>{
@@ -51,7 +83,15 @@ function App() {
           setAddress={setAddress} 
           additionalInfo={additionalInfo} 
           setAdditionalInfo={setAdditionalInfo}/>
-        <Mail/> 
+        <Mail emailText = {emailText} setEmailText = {setEmailText} hasFormulated = {hasFormulated} setHasFormulated={setHasFormulated} handleSubmit= {handleSubmit}/> 
+        <div className='reformulated-email-container'>
+            <p>Umformulierte E-Mail:</p>
+                {true && (
+          
+            <div className='reforumlated-email-box'>{reformulateEmail}Hier steht text und sehr großer text.</div>
+          
+        )}
+        </div>
       </DarkModeContext.Provider>
     </div>
    

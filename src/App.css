@@ -11,6 +11,7 @@
 body{
   color: var(--text-color);
   background-color: var(--background-color);
+  margin-bottom: 25px;
 }
 
 .header{
@@ -30,9 +31,13 @@ body{
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
-  text-decoration: none;
+  text-decoration: none;  
+}
+.dark-mode{
+  border-radius: 15px;
+  margin-left: 15px;
   
-  
+
 }
 
 .question-mark{
@@ -42,6 +47,7 @@ body{
   padding-right: 3px;
   border-radius: 5px;
   border: 1px solid black;
+  color: blue;
 }
 
 .info-box{
@@ -55,6 +61,7 @@ body{
   text-align: center;
   z-index: 1;
   box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+  color: black;
 
 }
 
@@ -104,6 +111,7 @@ body{
   justify-content: center;
   align-items: center;
   margin-top: 80px;
+  
 }
 
 .rewrite{
@@ -112,4 +120,24 @@ body{
   padding: 15px;
   font-weight: bold;
 
+}
+
+.reformulated-email-container{
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reforumlated-email-box{
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 70%;
+  height: 200px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  overflow-y: auto;
 }
