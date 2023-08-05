@@ -23,20 +23,42 @@ body{
 .navigation-menu{
   display: flex;
   justify-content: center;
-
+  
 }
+
+.navigation-menu a{
+  text-decoration: none;
+  color: black;
+}
+
 
 .navigation-liste{
   display:flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
-  text-decoration: none;  
+  list-style-type: none;
 }
+
+.navigation-liste li{
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid black;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  z-index: 1;
+}
+
+.navigation-liste li:hover{
+  transform: scale(1.1);
+  z-index: 2;
+}
+
 .dark-mode{
   border-radius: 15px;
   margin-left: 15px;
-  
+  padding:  15px;
+  background-color: white;
 
 }
 
@@ -140,4 +162,6 @@ body{
   box-sizing: border-box;
   margin-bottom: 20px;
   overflow-y: auto;
+  background-color: white;
+  color: black;  
 }

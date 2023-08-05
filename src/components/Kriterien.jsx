@@ -188,7 +188,9 @@ export default function Kriterien({
 
             <label className="form-label">
                 <div className="checkbox-container">
-                    <div>Geschlechtsneutrale Formulierung:</div>
+                    <div>Geschlechtsneutrale Formulierung:
+                      
+                    </div>
                     <p>{address ? "Ja": "Nein"}</p>
                     <input type="checkbox"
                     checked={address}
@@ -202,7 +204,7 @@ export default function Kriterien({
                 style={{resize: "none"}}
                 cols={62}
                 rows={7}
-                placeholder="z.B.: "></textarea>
+                placeholder="z.B.: Die E-Mail soll an meinen Chef gehen. Bitte auf die Formulierung achten. "></textarea>
            
 
         </form>

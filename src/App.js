@@ -86,9 +86,7 @@ function App() {
         <Mail emailText = {emailText} setEmailText = {setEmailText} hasFormulated = {hasFormulated} setHasFormulated={setHasFormulated} handleSubmit= {handleSubmit}/> 
         <div className='reformulated-email-container'>
             <p>Umformulierte E-Mail:</p>
-                {true && (
-          
-            <div className='reforumlated-email-box'>{reformulateEmail}Hier steht text und sehr großer text.</div>
+                {(<div className='reforumlated-email-box'>{reformulateEmail}</div>
           
         )}
         </div>

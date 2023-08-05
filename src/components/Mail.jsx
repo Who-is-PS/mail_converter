@@ -26,7 +26,7 @@ export default function Mail({emailText,setEmailText, hasFormulated, setHasFormu
                 style={{resize: "none"}}
                 cols={62}
                 rows={7}
-                placeholder="z.B.: "/>
+                placeholder="z.B.: Melde mich krank, da ich Übelkeit und starke Kopfschmerzen habe."/>
              
             <button onClick={handleSubmit} className="rewrite">{hasFormulated ? "Nicht zufrieden? Erneut umformulieren": "Umformulieren"}</button>
           
